@@ -19,9 +19,8 @@ test('get /api', async t => {
   try {
     let result = await tiny.get({url: `${base}/api`})
     t.ok(result, 'Got API response', result.body)
-    t.equal(
-      result.body.message,
-      'Hello from your Begin API!',
+    t.true(
+      result.body.message.startsWith('The current time is'),
       'API response should match.'
     )
   } catch (err) {
