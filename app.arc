@@ -6,6 +6,7 @@ folder build
 
 @http
 get /api
+get /quotes/:ticker
 
 @tables
 data
